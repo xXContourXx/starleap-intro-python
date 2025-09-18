@@ -37,4 +37,4 @@ def compare(x, y):
     else:
         print("x must equal y")
 
-compare (x, y)
+#compare (x, y)
