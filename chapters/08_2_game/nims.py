@@ -17,4 +17,4 @@ def play_nims(pile, max_stones):
 #            [ask player 2]
 #            [execute player 2's move]
 #
-#    print "Game over"
+#    print "Game over.  Player __ is the winner!"
