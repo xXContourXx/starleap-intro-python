@@ -21,9 +21,6 @@ print("Ch 6 Exercise 2: Not implemented") # Delete this line when you write your
 
 print("********** Ch 6 Exercise 3 **********")
 
-# Exercise 3 should be worked in a new file called palindrome.py
-
-
 
 print("********** Ch 6 Exercise 4 **********")
 
