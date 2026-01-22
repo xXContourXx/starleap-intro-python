@@ -2,17 +2,34 @@
 # The program thinks of a number between 1 and 100 and the user tries to guess it.
 # The program should tell the user if the guess is too high or too low.
 # The program should also tell the user how many guesses it took to guess the number.
+import random
 
 MIN_NUMBER = 1
 MAX_NUMBER = 100
 
 def get_valid_guess():
-    # TODO: Implement this function
+    guess = int(input('Enter your guess'))
+    return guess
+
     pass
 
 def play_picker():
-    # TODO: Implement this function
+    number = random.randint(MIN_NUMBER, MAX_NUMBER)
+    #print(f"Computer picked {number}. Shhh.")
+    print(f"I have picked a number between {MIN_NUMBER} and {MAX_NUMBER}.")
+    while True:
+        guess = get_valid_guess()
+        if guess == number:
+            print("Guessed right, you rock!")
+            break
+        elif guess > number:
+            print("incorrect, guess too high")
+        else:
+            print('incorrect, guess too low')
+
     pass
+
+    
 
 def main():
     print('=' * 60)

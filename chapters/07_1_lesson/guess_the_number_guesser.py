@@ -21,12 +21,11 @@ def play_guesser():
     MAX_NUMBER = 100
     print('-' * 60)
     print()
-    print(f"Think of a number between {MIN_NUMBER} and {MAX_NUMBER} (inclusive).")
+    print(f"Think of a number between 1 and 100 (inclusive).")
     input("Press Enter when you have thought of a number.")
-    print()
+    get_number()
     guess_count = 0
-    # TODO: Implement the rest of this function
-    pass
+    
 
 def main():
     print('-' * 60)
