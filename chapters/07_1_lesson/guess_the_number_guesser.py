@@ -5,26 +5,44 @@
 
 import random
 
+MIN_NUMBER = 1
+MAX_NUMBER =100
+
 
 def get_number_feedback():
-    # TODO: Implement this function
-    pass
+    answer = input('If guess is too high, enter H. If it is too low, enter L. If it is correct enter C.')
+    return answer
+
 
 
 def get_number():
-    # TODO: Implement this function
-    pass
+    return(MIN_NUMBER + MAX_NUMBER) // 2
 
 
 def play_guesser():
-    MIN_NUMBER = 1
-    MAX_NUMBER = 100
+    global MIN_NUMBER
+    global MAX_NUMBER
     print('-' * 60)
     print()
     print(f"Think of a number between 1 and 100 (inclusive).")
     input("Press Enter when you have thought of a number.")
-    get_number()
     guess_count = 0
+    while True:
+        guess_count += 1
+        guess = get_number()
+        print(F'Is it {guess}?')
+        #computer makes a guess
+        feedback = get_number_feedback()
+        #ask guess feedback - high low or corrcect
+        if feedback == 'c':
+            print(f"hehe I guessed your number in {guess_count} guesses")
+            return guess_count
+        elif feedback == 'h':
+            MAX_NUMBER = guess -1
+        elif feedback == 'l':
+            MIN_NUMBER = guess + 1
+        #if correct kill function
+        #if not guess again
     
 
 def main():
@@ -35,7 +53,7 @@ def main():
     while True:
         guess_count = play_guesser()
         answer = input("Do you want to play again? (y/n) ").lower()
-        if answer == "n":
+        if answer != "y":
             print("Thanks for playing!")
             break
 

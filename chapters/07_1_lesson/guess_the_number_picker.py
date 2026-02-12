@@ -8,14 +8,22 @@ MIN_NUMBER = 1
 MAX_NUMBER = 100
 
 def get_valid_guess():
-    guess = int(input('Enter your guess'))
-    return guess
+    while True:
+      guess_text = input('Enter your guess')
+      try:
+          guess = int(guess_text)
+          if guess > MAX_NUMBER or guess < MIN_NUMBER:
+              raise ValueError()
+          return guess
+      except:
+          print('Hey, put in a valid guess dummie')
+    
 
     pass
 
 def play_picker():
     number = random.randint(MIN_NUMBER, MAX_NUMBER)
-    #print(f"Computer picked {number}. Shhh.")
+    #print(f"Computer picked {number}.")
     print(f"I have picked a number between {MIN_NUMBER} and {MAX_NUMBER}.")
     while True:
         guess = get_valid_guess()
@@ -24,6 +32,7 @@ def play_picker():
             break
         elif guess > number:
             print("incorrect, guess too high")
+        
         else:
             print('incorrect, guess too low')
 
@@ -39,8 +48,9 @@ def main():
     while True:
         guess_count = play_picker()
         answer = input("Do you want to play again? (y/n) ").lower()
-        if answer == "n":
+        if answer != "y":
             print("Thanks for playing!")
+
             break
 
 if __name__ == "__main__":
