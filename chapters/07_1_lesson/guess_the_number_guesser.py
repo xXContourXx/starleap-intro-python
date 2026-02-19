@@ -10,7 +10,9 @@ MAX_NUMBER =100
 
 
 def get_number_feedback():
-    answer = input('If guess is too high, enter H. If it is too low, enter L. If it is correct enter C.')
+    answer = ''
+    while answer != 'h' and answer !='l' and answer !='c':
+     answer = input('If guess is too high, enter H. If it is too low, enter L. If it is correct enter C.')
     return answer
 
 
