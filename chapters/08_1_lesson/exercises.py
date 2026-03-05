@@ -57,19 +57,26 @@ def any_lowercase5(s):
             return False
     return True
 
-print('''
-# Type your answer for Excercise 4 here.
+print('''''')
 
-
-''')
-
-print("Ch 8 Exercise 4: Not implemented") # Delete this line when you write your code!
 
 
 
 print("********** Ch 8 Exercise 5 **********")
 
-# Do your work for Excercise 5 here.
+print
 
-print("Ch 8 Exercise 5: Not implemented") # Delete this line when you write your code!
+text = input("Enter message")
+shift = 9
 
+result = ""
+
+for letter in text:
+    if letter == " ":
+        result = result + " "
+    else:
+        number = ord(letter) - ord("a") 
+        new_number = (number + shift) % 26
+        new_letter = chr(new_number + ord("a"))
+        result = result + new_letter
+print("Encrypted:", result)
