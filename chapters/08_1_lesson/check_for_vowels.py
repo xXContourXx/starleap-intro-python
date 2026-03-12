@@ -46,7 +46,7 @@ def run_only_vowels(phrase):
     print(phrase, only_vowels(phrase))
 
 # Testing the functions
-run_only_vowels("tim the beAver")
+run_only_vowels("test")
 run_only_vowels("HeLlO wOrLd!!")
 run_only_vowels("klxn") # Expect no vowels from this one!
     

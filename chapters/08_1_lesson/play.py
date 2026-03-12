@@ -69,9 +69,9 @@ elif n1c > n2c:
 
 def is_reverse(word1, word2):
     flip1 = ''
-    index = len(word) - 1
+    index = len(word1) - 1
     while index >=0:
-        l = word[index]
+        l = word1[index]
         flip1 = flip1 +l
         index -=1
     print('flip1', flip1)

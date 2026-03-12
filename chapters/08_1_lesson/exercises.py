@@ -20,7 +20,10 @@ print("********** Ch 8 Exercise 3 **********")
 
 # Do your work for Excercise 3 here.
 
-print("Ch 8 Exercise 3: Not implemented") # Delete this line when you write your code!
+fruit = 'banana'
+print(fruit[0:5:2])
+
+
 
 
 
@@ -57,7 +60,7 @@ def any_lowercase5(s):
             return False
     return True
 
-print('''''')
+
 
 
 
